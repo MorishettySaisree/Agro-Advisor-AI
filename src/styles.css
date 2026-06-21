@@ -1,0 +1,293 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AGRO ADVISOR AI — Design System
+ * Nature-inspired, premium, farmer-friendly.
+ */
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", "Plus Jakarta Sans", ui-serif, serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-earth: var(--earth);
+  --color-earth-foreground: var(--earth-foreground);
+  --color-sky: var(--sky);
+  --color-sun: var(--sun);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Cream paper background */
+  --background: oklch(0.985 0.012 95);
+  --foreground: oklch(0.22 0.04 150);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 150);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 150);
+
+  /* Primary: vibrant agriculture green #16A34A */
+  --primary: oklch(0.62 0.18 142);
+  --primary-foreground: oklch(0.99 0.01 95);
+  --primary-glow: oklch(0.78 0.18 142);
+
+  /* Light green surface #DCFCE7 */
+  --secondary: oklch(0.95 0.06 142);
+  --secondary-foreground: oklch(0.28 0.08 150);
+
+  --muted: oklch(0.96 0.015 95);
+  --muted-foreground: oklch(0.48 0.03 150);
+
+  --accent: oklch(0.92 0.08 142);
+  --accent-foreground: oklch(0.28 0.08 150);
+
+  /* Earth brown #7C5C46 */
+  --earth: oklch(0.5 0.06 60);
+  --earth-foreground: oklch(0.98 0.01 95);
+
+  /* Sky + sun for weather widgets */
+  --sky: oklch(0.72 0.13 235);
+  --sun: oklch(0.82 0.16 75);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0.01 95);
+
+  --border: oklch(0.9 0.02 142);
+  --input: oklch(0.92 0.02 142);
+  --ring: oklch(0.62 0.18 142);
+
+  --chart-1: oklch(0.62 0.18 142);
+  --chart-2: oklch(0.72 0.13 235);
+  --chart-3: oklch(0.82 0.16 75);
+  --chart-4: oklch(0.5 0.06 60);
+  --chart-5: oklch(0.7 0.18 30);
+
+  --sidebar: oklch(0.99 0.01 95);
+  --sidebar-foreground: oklch(0.22 0.04 150);
+  --sidebar-primary: oklch(0.62 0.18 142);
+  --sidebar-primary-foreground: oklch(0.99 0.01 95);
+  --sidebar-accent: oklch(0.95 0.06 142);
+  --sidebar-accent-foreground: oklch(0.28 0.08 150);
+  --sidebar-border: oklch(0.9 0.02 142);
+  --sidebar-ring: oklch(0.62 0.18 142);
+
+  /* Gradients & shadows */
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.62 0.18 142) 0%,
+    oklch(0.55 0.15 160) 50%,
+    oklch(0.45 0.1 200) 100%
+  );
+  --gradient-leaf: linear-gradient(
+    135deg,
+    oklch(0.62 0.18 142),
+    oklch(0.78 0.18 142)
+  );
+  --gradient-sun: linear-gradient(
+    135deg,
+    oklch(0.82 0.16 75),
+    oklch(0.72 0.13 35)
+  );
+  --gradient-sky: linear-gradient(
+    180deg,
+    oklch(0.92 0.06 235),
+    oklch(0.78 0.1 235)
+  );
+  --gradient-soil: linear-gradient(
+    135deg,
+    oklch(0.5 0.06 60),
+    oklch(0.4 0.07 50)
+  );
+
+  --shadow-soft: 0 1px 2px oklch(0.22 0.04 150 / 0.04),
+    0 8px 24px -8px oklch(0.22 0.04 150 / 0.08);
+  --shadow-elegant: 0 10px 40px -12px oklch(0.5 0.18 142 / 0.25);
+  --shadow-glow: 0 0 60px oklch(0.78 0.18 142 / 0.35);
+
+  --glass-bg: oklch(1 0 0 / 0.65);
+  --glass-border: oklch(1 0 0 / 0.5);
+}
+
+.dark {
+  --background: oklch(0.18 0.025 150);
+  --foreground: oklch(0.96 0.015 95);
+
+  --card: oklch(0.22 0.03 150);
+  --card-foreground: oklch(0.96 0.015 95);
+  --popover: oklch(0.22 0.03 150);
+  --popover-foreground: oklch(0.96 0.015 95);
+
+  --primary: oklch(0.72 0.18 142);
+  --primary-foreground: oklch(0.15 0.04 150);
+  --primary-glow: oklch(0.82 0.16 142);
+
+  --secondary: oklch(0.28 0.04 150);
+  --secondary-foreground: oklch(0.96 0.015 95);
+
+  --muted: oklch(0.25 0.025 150);
+  --muted-foreground: oklch(0.68 0.02 150);
+
+  --accent: oklch(0.32 0.06 142);
+  --accent-foreground: oklch(0.96 0.015 95);
+
+  --earth: oklch(0.62 0.06 60);
+  --earth-foreground: oklch(0.15 0.04 150);
+
+  --sky: oklch(0.7 0.13 235);
+  --sun: oklch(0.82 0.16 75);
+
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.96 0.015 95);
+
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: oklch(0.72 0.18 142);
+
+  --sidebar: oklch(0.2 0.03 150);
+  --sidebar-foreground: oklch(0.96 0.015 95);
+  --sidebar-primary: oklch(0.72 0.18 142);
+  --sidebar-primary-foreground: oklch(0.15 0.04 150);
+  --sidebar-accent: oklch(0.28 0.04 150);
+  --sidebar-accent-foreground: oklch(0.96 0.015 95);
+  --sidebar-border: oklch(1 0 0 / 0.1);
+  --sidebar-ring: oklch(0.72 0.18 142);
+
+  --glass-bg: oklch(0.22 0.03 150 / 0.6);
+  --glass-border: oklch(1 0 0 / 0.1);
+
+  --shadow-elegant: 0 10px 40px -12px oklch(0.05 0 0 / 0.5);
+  --shadow-glow: 0 0 60px oklch(0.72 0.18 142 / 0.4);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-gradient-leaf {
+    background: var(--gradient-leaf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grain {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      oklch(0.22 0.04 150 / 0.06) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes drift {
+  0% { transform: translateX(-10%); }
+  100% { transform: translateX(110%); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-drift-slow { animation: drift 60s linear infinite; }
+.animate-sun-pulse { animation: sun-pulse 8s ease-in-out infinite; }
+
+/* Weather icon animations */
+@keyframes wx-spin { to { transform: rotate(360deg); } }
+@keyframes wx-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes wx-drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+@keyframes wx-rain { 0% { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+@keyframes wx-snow { 0% { transform: translateY(-4px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(12px); opacity: 0; } }
+@keyframes wx-flash { 0%, 60%, 100% { opacity: 1; } 65%, 75% { opacity: 0.2; } 80% { opacity: 1; } }
+@keyframes wx-fog { 0%,100% { transform: translateX(-4px); } 50% { transform: translateX(4px); } }
